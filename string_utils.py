@@ -1,17 +1,34 @@
-def split_before_each_uppercases(input):
-    """
-    Splits a string before every uppercase character.
-    Uppercase letters remain in the resulting parts.
-    """
-    
+def split_at_first_digit(formula):
+    for i,  digit in formula:
+        if digit.isdigit():
+            prefix = formula[0:i:1]
+            number = formula[i::]
+            return prefix,number
+            
+    return formula, 1
 
-def split_at_first_digit(s):
-    """
-    Splits a string into:
-      1) prefix before the first digit
-      2) integer starting from the first digit
 
-    If no digit exists:
-        return (original_string, 1)
-    """
+
+
+def split_before_each_uppercase(formula):
+  current = _
+  new_formula = []
+  for let in formula:
+    if let.isupper():
+      new_formula.append(current)
+      current = _ 
+    current += let
+  new_formula.append(current)
+  print(new_formula)
+            
+            
+       
+            
+            
+        
+            
+            
+            
+            
+            
   

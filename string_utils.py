@@ -1,28 +1,30 @@
-def split_at_first_digit(formula):
-    for i,  digit in enumerate(formula):
-        if digit.isdigit():
-            prefix = formula[0:i:1]
-            number = formula[i::]
-            return prefix,int(number)
-          
-    return formula, 1
-
-
-def split_before_each_uppercases(formula):
-    if not formula:
+def split_before_each_uppercases(input):    
+    if not input:
         return []
-    current = formula[0]
-    new_formula = []
-    for  let in formula[1:]:
-        if let.isupper():
-            new_formula.append(current)
-            current = let
+
+    parts = []
+    current = input[0]
+
+    for ch in input[1:]:
+        if ch.isupper():
+            parts.append(current)
+            current = ch
         else:
-            current += let
-    
-  new_formula.append(current)
-  return new_formula
-    
+            current += ch
+
+    parts.append(current)
+    return parts
+
+def split_at_first_digit(s):    
+    for i, ch in enumerate(s):
+        if ch.isdigit():
+            # First digit found
+            prefix = s[:i]
+            number = int(s[i:])
+            return prefix, number
+
+    # No digit found
+    return s, 1
             
             
        

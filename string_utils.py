@@ -10,16 +10,18 @@ def split_at_first_digit(formula):
 
 
 
-def split_before_each_uppercase(formula):
+def split_before_each_uppercases(formula):
   current = _
   new_formula = []
   for let in formula:
     if let.isupper():
       new_formula.append(current)
-      current = _ 
-    current += let
-new_formula.append(current)
-return new_formula
+      current = _
+    else:
+      current += let
+    
+  new_formula.append(current)
+  return new_formula
     
             
             

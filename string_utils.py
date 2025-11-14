@@ -26,7 +26,7 @@ def split_at_first_digit(formual):
             return prefix, number
 
     # No digit found
-    return s, 1
+    return formual, 1
             
             
        

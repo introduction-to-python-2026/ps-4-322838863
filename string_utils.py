@@ -1,5 +1,5 @@
 def split_at_first_digit(formula):
-    for i,  digit in formula:
+    for i,  digit in enumerate(formula):
         if digit.isdigit():
             prefix = formula[0:i:1]
             number = formula[i::]

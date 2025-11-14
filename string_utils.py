@@ -19,8 +19,8 @@ def split_before_each_uppercase(input):
     parts.append(current)
     return parts
 
-def split_at_first_digit(input):
-     """
+def split_at_digit(s):
+    """
     Splits a string into:
       1) prefix before the first digit
       2) integer starting from the first digit
@@ -28,11 +28,11 @@ def split_at_first_digit(input):
     If no digit exists:
         return (original_string, 1)
     """
-    for i, ch in enumerate(input):
+    for i, ch in enumerate(s):
         if ch.isdigit():
             # First digit found
-            prefix = input[:i]
-            number = int(input[i:])
+            prefix = s[:i]
+            number = int(s[i:])
             return prefix, number
 
     # No digit found

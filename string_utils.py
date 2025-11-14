@@ -18,8 +18,9 @@ def split_before_each_uppercase(formula):
       new_formula.append(current)
       current = _ 
     current += let
-  new_formula.append(current)
-  print(new_formula)
+new_formula.append(current)
+return new_formula
+    
             
             
        

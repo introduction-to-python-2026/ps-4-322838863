@@ -10,7 +10,7 @@ def split_at_first_digit(formula):
 
 
 
-def split_before_each_uppercases1(formula):
+def split_before_each_uppercases(formula):
     if not formula:
       return []
     current = formula[0]

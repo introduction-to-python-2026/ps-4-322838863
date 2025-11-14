@@ -3,7 +3,7 @@ def split_at_first_digit(formula):
         if digit.isdigit():
             prefix = formula[0:i:1]
             number = formula[i::]
-            return prefix,number
+            return prefix,int(number)
             
     return formula, 1
 

@@ -1,4 +1,5 @@
-def split_before_each_uppercases(formual):    
+def split_before_each_uppercases(formual):
+
     if not formual:
         return []
 
@@ -15,13 +16,14 @@ def split_before_each_uppercases(formual):
     parts.append(current)
     return parts
 
-def split_at_first_digit(formual):    
+def split_at_first_digit(formual):
+    
     for i, ch in enumerate(formual):
         if ch.isdigit():
             # First digit found
             prefix = formual[:i]
-            number = formual[i:]
-            return prefix, int(number)
+            number = int(formual[i:])
+            return prefix, number
 
     # No digit found
     return s, 1

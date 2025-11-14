@@ -4,23 +4,21 @@ def split_at_first_digit(formula):
             prefix = formula[0:i:1]
             number = formula[i::]
             return prefix,int(number)
-            
+          
     return formula, 1
-
-
 
 
 def split_before_each_uppercases(formula):
     if not formula:
-      return []
+        return []
     current = formula[0]
     new_formula = []
     for  let in formula[1:]:
         if let.isupper():
-          new_formula.append(current)
-          current = let
+            new_formula.append(current)
+            current = let
         else:
-          current += let
+            current += let
     
   new_formula.append(current)
   return new_formula
